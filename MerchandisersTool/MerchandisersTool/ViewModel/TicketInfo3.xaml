@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MerchandisersTool.ViewModel.TicketInfo3" Title=" Ticket Info">
+    <ContentPage.Content>
+        <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#7A4B8C">
+            <StackLayout BackgroundColor="#7A4B8C">
+                <Label Text="Current Ticket"
+                       FontSize="Large"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+                <ListView x:Name="ticketInfo" RowHeight="110">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding displayName}"/>
+                                    <Label Text="{Binding store}"/>
+                                    <Label Text="{Binding location}"/>
+                                    <Label Text="{Binding duration}"/>
+                                    <Label Text="{Binding note}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Label x:Name="_timer" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                <Entry x:Name="_ticketId" IsVisible="False"></Entry>
+                <Entry x:Name="_displayName" IsVisible="False"/>
+                <Entry x:Name="_clientName" IsVisible="False"/>
+                <Entry x:Name="_location" IsVisible="False"/>
+                <Entry x:Name="_duration" IsVisible="False"/>
+                <Entry x:Name="_note" IsVisible="False"/>
+                <Label x:Name="note" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                <Button x:Name="noteBtn" Style="{StaticResource Key=merchBtns}" Text="Add Note" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Clicked="noteBtn_Clicked"/>
+                <Button x:Name="btnStart"
+                        Style="{StaticResource Key=merchBtns}"
+                    Text="Start Job"
+                    VerticalOptions="Center"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked"/>
+                <Button x:Name="btnStop"
+                        Style="{StaticResource Key=merchBtns}"
+                    Text="Stop Job"
+                    VerticalOptions="Center"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_1"/>
+                <Button x:Name="btnReset"
+                        Style="{StaticResource Key=merchBtns}"
+                    Text="Job Complete"
+                    VerticalOptions="Center"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_2"/>
+
+            </StackLayout>
+            <ContentView x:Name="popupNote" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout Orientation="Vertical" HeightRequest="200" WidthRequest="300" BackgroundColor="White">
+                        <Entry  x:Name="newNote" Margin="20,20,20,10" Placeholder="Enter Note"></Entry>
+
+                        <Button Margin="20,0,20,0" Text="Add" Clicked="Button_Clicked_3"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+        </AbsoluteLayout>
+
+
+
+    </ContentPage.Content>
+
+</ContentPage>

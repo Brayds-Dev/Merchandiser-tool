@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MerchandisersTool.Views.AddTicket" Title="Add Ticket">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#E7C382">
+            <Entry Placeholder="Enter display name" Keyboard="Text" x:Name="_displayName"></Entry>
+            <Entry Placeholder="Enter client name" Keyboard="Text" x:Name="_clientName"></Entry>
+            <Entry Placeholder="Enter client location" Keyboard="Text" x:Name="_location"></Entry>
+            <Label Text="" x:Name="_duration"/>
+            <Label x:Name="_note"/>
+            <Button Style="{StaticResource Key=supBtns}" Text="Add" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MerchandisersTool.Views.ViewMerch" Title="Merchandiser List">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#E7C382">
+            <Label Text="List of merchandiser details"
+                   FontSize="Large"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Center"></Label>
+            <ListView x:Name="merchList" RowHeight="90">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding firstName}"/>
+                                <Label Text="{Binding lastName}"/>
+                                <Label Text="{Binding merchPhoneNo}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Add" Activated="Add_Activated"
+                         Priority="0" Order="Secondary" />
+        <ToolbarItem Name="Remove" Activated="Remove_Activated"
+                         Priority="1" Order="Secondary" />
+        <ToolbarItem Name="Update" Activated="Update_Activated"
+                         Priority="2" Order="Secondary" />
+    </ContentPage.ToolbarItems>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MerchandisersTool.Views.ViewClient" Title="Client List">
+
+    <StackLayout BackgroundColor="#E7C382">
+        <Label Text="List of client details" FontSize="Large" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+        <ListView x:Name="clientList" RowHeight="90">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding clientName}"/>
+                            <Label Text="{Binding location}"/>
+                            <Label Text="{Binding phoneNo}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Add" Activated="Add_Activated"
+                         Priority="0" Order="Secondary" />
+        <ToolbarItem Name="Remove" Activated="Remove_Activated"
+                         Priority="1" Order="Secondary" />
+        <ToolbarItem Name="Update" Activated="Update_Activated"
+                         Priority="2" Order="Secondary" />
+    </ContentPage.ToolbarItems>
+
+</ContentPage>

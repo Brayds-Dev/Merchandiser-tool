@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MerchandisersTool.Views.TicketInfo" Title=" Ticket Info">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#E7C382">
+            <Label Text="List of all tickets"
+                   TextColor="Black"
+                   FontSize="Large"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="ticketInfo" RowHeight="110">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding displayName}"/>
+                                <Label Text="{Binding store}"/>
+                                <Label Text="{Binding location}"/>
+                                <Label Text="{Binding duration}"/>
+                                <Label Text="{Binding note}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        
+        <ToolbarItem Name="Remove" Activated="Remove_Activated"
+                         Priority="0" Order="Secondary" />
+        
+    </ContentPage.ToolbarItems>
+</ContentPage>

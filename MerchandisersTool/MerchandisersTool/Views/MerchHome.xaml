@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MerchandisersTool.Views.MerchHome" Title="Home">
+    <ContentPage>
+        <StackLayout BackgroundColor="#7A4B8C">
+            <Label Text="Swipe to change schedule"
+                   FontSize="Large"
+                   TextColor="White"
+                   VerticalOptions="Start"
+                   HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Today"
+                   TextColor="White"
+                   FontSize="Large"
+                   FontFamily="SansSeriff"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+            <Button Style="{StaticResource Key=merchBtns}"
+                    Text="Ticket 1"
+                    FontSize="Medium"
+                    VerticalOptions="Center"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked"/>
+            <Button Style="{StaticResource Key=merchBtns}" Text="Ticket 2"
+                    FontSize="Medium"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_1"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        <StackLayout BackgroundColor="#7A4B8C">
+            <Label Text="Swipe to change schedule"
+                   TextColor="White"
+                   FontSize="Large"
+                   VerticalOptions="Start"
+                   HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Tomorrow"
+                   TextColor="White"
+                   FontSize="Large"
+                   FontFamily="SansSeriff"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Style="{StaticResource Key=merchBtns}" Text="Ticket 3"
+                    FontSize="Medium"
+                    VerticalOptions="Center"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_2"/>
+            <Button Style="{StaticResource Key=merchBtns}" Text="Ticket 4"
+                    FontSize="Medium"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_3"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        <StackLayout BackgroundColor="#7A4B8C">
+            <Label Text="Swipe to change schedule"
+                   TextColor="White"
+                   FontSize="Large"
+                   VerticalOptions="Start"
+                   HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Next Week"
+                   TextColor="White"
+                   FontSize="Large"
+                   FontFamily="SansSeriff"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Style="{StaticResource Key=merchBtns}" Text="Ticket 5"
+                    FontSize="Medium"
+                    VerticalOptions="Center"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_4"/>
+            <Button Style="{StaticResource Key=merchBtns}" Text="Ticket 6"
+                    FontSize="Medium"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_5"/>
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>

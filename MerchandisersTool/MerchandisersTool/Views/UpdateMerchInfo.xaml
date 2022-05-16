@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MerchandisersTool.Views.UpdateMerchDetail" Title=" Update Merchandiser Details">
+    <ContentPage.Content  BackgroundColor="LightGreen">
+        <StackLayout BackgroundColor="#E7C382">
+            <Label Text="Select the merchandiser from below list to modify" HorizontalTextAlignment="Center"></Label>
+            <ListView x:Name="merchList" RowHeight="90">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding firstName}"/>
+                                <Label Text="{Binding lastName}"/>
+                                <Label Text="{Binding merchPhoneNo}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Entry x:Name="ID" Placeholder="ID here" Keyboard="Text" IsVisible="False"></Entry>
+            <Entry x:Name="fName" Placeholder="Edit first name here" Keyboard="Text"></Entry>
+            <Entry x:Name="lName" Placeholder="Edit last name here" Keyboard="Text"></Entry>
+            <Entry x:Name="phoneNo" Placeholder="Edit phone No here" Keyboard="Text"></Entry>
+            <Button Style="{StaticResource Key=supBtns}" Text="Update" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

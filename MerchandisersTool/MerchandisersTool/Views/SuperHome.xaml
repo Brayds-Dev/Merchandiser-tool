@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MerchandisersTool.Views.SuperHome" Title="Home">
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Merchandisers">
+        <StackLayout BackgroundColor="#E7C382">
+            <Label Text="Select an option"
+                   FontSize="Large"
+                   TextColor="Black"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>
+            <Button Style="{StaticResource Key=supBtns}" Text="Add Merchandiser"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked"/>
+            <Button Style="{StaticResource Key=supBtns}" Text="View Merchandisers"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_1"/>
+            <Button Style="{StaticResource Key=supBtns}" Text="Update Merchandisers"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_2"/>
+            <!--=<ListView x:Name="merchList"></ListView>=-->
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Clients">
+        <StackLayout BackgroundColor="#E7C382">
+            <Label Text="Select an option"
+                   TextColor="Black"
+                   FontSize="Large"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>
+            <Button Style="{StaticResource Key=supBtns}" Text="Add Client"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_3"/>
+            <Button Style="{StaticResource Key=supBtns}" Text="View Clients"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_4"/>
+            <Button Style="{StaticResource Key=supBtns}" Text="Update Clients"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_5"/>
+            <Button Style="{StaticResource Key=supBtns}" Text="Add Ticket"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_6"/>
+            <Button Style="{StaticResource Key=supBtns}" Text="View Tickets"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked_7"/>
+            <!--<ListView x:Name="clientList"></ListView>-->
+        </StackLayout>
+    </ContentPage>
+
+
+</TabbedPage>

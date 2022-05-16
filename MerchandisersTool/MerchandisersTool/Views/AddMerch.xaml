@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MerchandisersTool.Views.AddMerch" Title="Add New Merchandiser">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#E7C382">
+            <Entry Placeholder="Enter merchandisers first name" Keyboard="Text" x:Name="_fNameEntry"></Entry>
+            <Entry Placeholder="Enter merchandisers last name" Keyboard="Text" x:Name="_lNameEntry"></Entry>
+            <Entry Placeholder="Enter merchandisers phone number" Keyboard="Text" x:Name="_merchPhoneNo"></Entry>
+            <Button Style="{StaticResource Key=supBtns}" Text="Add" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
